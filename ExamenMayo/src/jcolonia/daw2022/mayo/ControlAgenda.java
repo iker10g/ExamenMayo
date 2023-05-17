@@ -1,5 +1,7 @@
 package jcolonia.daw2022.mayo;
 
+import java.util.Scanner;
+
 /**
  * Gestión de números de teléfono.
  * 
@@ -16,6 +18,8 @@ public class ControlAgenda {
 
 	/** Título de la aplicación. Se mostrará como encabezado del menú principal. */
 	private static final String TÍTULO_MENÚ_PRINCIPAL = "Agenda telefónica";
+	
+	private Scanner entrada;
 
 	/** Almacen de números de teléfono. */
 	private AgendaTeléfonos agenda;
@@ -64,9 +68,9 @@ public class ControlAgenda {
 				fin = true;
 				Vista.mostrarAviso("¡¡¡A-D-I-O-S!!");
 				break;
-			//case 1: // Opción 1: Entrada datos
-			//	cargarTeléfono();
-			//	break;
+			case 1: // Opción 1: Entrada datos
+				cargarTeléfono();
+			break;
 			//case 2: // Opción 2: Mostrar listado
 			//	mostrarAgenda();
 			//	break;
@@ -82,6 +86,12 @@ public class ControlAgenda {
 				System.exit(1);
 			}
 		} while (!fin);
+	}
+
+	private void cargarTeléfono() {
+		VistaAlta telefono= new VistaAlta(entrada,null);
+		telefono.cargarTelefono();
+		
 	}
 
 	/**
