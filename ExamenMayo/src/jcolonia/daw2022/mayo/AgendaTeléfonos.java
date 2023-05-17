@@ -124,8 +124,19 @@ public class AgendaTeléfonos {
 		return número;
 	}
 
-	public Vector<AgendaTeléfonos> obtenerLista() {
-		
-		return (Vector<AgendaTeléfonos>) lista;
+
+
+
+	public Map<Integer, String> obtenerLista() {
+		// TODO Esbozo de método generado automáticamente
+		return null;
 	}
+
+
+
+
+
+
+	
+	
 }

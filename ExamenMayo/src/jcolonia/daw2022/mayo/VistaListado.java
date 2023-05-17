@@ -1,16 +1,17 @@
 package jcolonia.daw2022.mayo;
 
+import java.util.Map;
 import java.util.Vector;
 
 
-public class VistaListado {
+public class VistaListado extends AgendaTeléfonos{
 	
-	private Vector <AgendaTeléfonos> lista;
+	private Vector<AgendaTeléfonos> lista;
 	
 	
-	public VistaListado(Vector<AgendaTeléfonos> vector) {
+	public VistaListado(Map<Integer, String> Map) {
 		lista = new Vector<> ();
-		for(AgendaTeléfonos elemento: vector) {
+		for(AgendaTeléfonos elemento:Map {
 			lista.add(elemento);
 		}
 	}

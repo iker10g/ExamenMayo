@@ -77,9 +77,9 @@ public class ControlAgenda {
 			//case 3: // Opción 3: Mostrar estado
 			//	mostrarEstado();
 			//	break;
-			//case 4: // Opción 4: Reset
-			//	restablecer();
-			//	break;
+			case 4: // Opción 4: Reset
+			    restablecer();
+			break;
 			default: // Opción no esperada: abortar
 				ejecutarGenérico(opciónElegida);
 				Vista.mostrarError("Error interno de programa - operación pendiente de desarrollo");
@@ -88,9 +88,14 @@ public class ControlAgenda {
 		} while (!fin);
 	}
 
+	private void restablecer() {
+		
+		
+	}
+
 	private void mostrarAgenda() {
 		try {
-			VistaListado lista=new VistaListado(agenda.obtenerLista());
+			VistaListado lista=new VistaListado( agenda.obtenerLista());
 			lista.mostrar();
 		} catch (ListaException e) {
 			System.err.printf("Se ha producido un error");
