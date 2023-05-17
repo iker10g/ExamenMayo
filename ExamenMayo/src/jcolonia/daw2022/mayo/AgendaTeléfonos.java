@@ -123,4 +123,9 @@ public class AgendaTeléfonos {
 
 		return número;
 	}
+
+	public Vector<AgendaTeléfonos> obtenerLista() {
+		
+		return (Vector<AgendaTeléfonos>) lista;
+	}
 }
